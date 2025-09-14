@@ -18,7 +18,8 @@ controllTD2.addEventListener('input', (event) => {
 }, false);
 
 let controllTD3 = document.querySelector('.controllTD3') ;
-controllTD3.addEventListener('input', (event) => {
+let sendBtn = document.querySelector('.sendBtn');
+sendBtn.addEventListener('click', () => {
   ws.send(JSON.stringify({ 
   'text': controllTD3.value,
   'ID': id
