@@ -20,7 +20,7 @@ controllTD2.addEventListener('input', (event) => {
 let controllTD3 = document.querySelector('.controllTD3') ;
 controllTD3.addEventListener('input', (event) => {
   ws.send(JSON.stringify({ 
-  'text': controllTD3,
+  'text': controllTD3.value,
   'ID': id
 }));
 }, false);
