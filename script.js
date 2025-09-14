@@ -1,18 +1,28 @@
 let ws = new WebSocket("wss://sose-z1oj.onrender.com/:443");
+let id = 2233999;
 
 let controllTD = document.querySelector('.controllTD') ;
 controllTD.addEventListener('input', (event) => {
-  ws.send(JSON.stringify({ 'slider1': controllTD.value / 100 }));
+  ws.send(JSON.stringify({ 
+  'slider1': controllTD.value / 100,
+  'ID': id
+}));
 }, false);
 
 let controllTD2 = document.querySelector('.controllTD2') ;
 controllTD2.addEventListener('input', (event) => {
-  ws.send(JSON.stringify({ 'slider2': controllTD2.value / 100 }));
+  ws.send(JSON.stringify({ 
+  'slider2': controllTD2.value / 100,
+  'ID': id
+}));
 }, false);
 
 let controllTD3 = document.querySelector('.controllTD3') ;
 controllTD3.addEventListener('input', (event) => {
-  ws.send(JSON.stringify({ 'text': controllTD3.value }));
+  ws.send(JSON.stringify({ 
+  'text': controllTD3,
+  'ID': id
+}));
 }, false);
 
 ws.addEventListener('open', (event) => {
