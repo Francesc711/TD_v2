@@ -1,4 +1,4 @@
-let ws = new WebSocket("wss://sose-z1oj.onrender.com/:443");
+let ws = new WebSocket("wss://websocket-m24h.onrender.com/:443");
 let id = 2233999;
 
 let controllTD = document.querySelector('.controllTD') ;
